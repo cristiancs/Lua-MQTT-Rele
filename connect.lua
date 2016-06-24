@@ -19,6 +19,6 @@ m:on("connect", function(con)
     print("  Port: ".. mqtt_broker_port)
     print("  Client ID: ".. mqtt_client_id)
     print("  Username: ".. mqtt_username)
-    dofile("relay.lua")
+    dofile("main.lua")
 
 end)
