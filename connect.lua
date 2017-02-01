@@ -5,10 +5,12 @@ m:on("offline", function(con)
   print ("reconnecting...")
   print(node.heap())
   tmr.alarm(1, 1000, 1, function() 
-    m:connect(mqtt_broker_ip, mqtt_broker_port)
-  end)
+  print("Conectando...")
+  m:connect(mqtt_broker_ip, mqtt_broker_port)
+end)
 end)
 tmr.alarm(1, 1000, 1, function() 
+  print("Conectando...")
   m:connect(mqtt_broker_ip, mqtt_broker_port)
 end)
 conectado = 0
@@ -19,6 +21,12 @@ m:on("connect", function(con)
     print("  Port: ".. mqtt_broker_port)
     print("  Client ID: ".. mqtt_client_id)
     print("  Username: ".. mqtt_username)
-    dofile("main.lua")
+    if conectado == 0 then
+      dofile("main.lua")
+      subscribir()
+    else
+      subscribir()
+    end
+    conectado = 1
 
 end)

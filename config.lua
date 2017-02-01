@@ -1,13 +1,13 @@
 --- MQTT ---
-mqtt_broker_ip = "SERVER"     
+mqtt_broker_ip = "192.168.0.106"     
 mqtt_broker_port = 1883
 mqtt_username = ""
 mqtt_password = ""
-mqtt_client_id = "ESP866-TAG"
+mqtt_client_id = "ESP866-EXTERIOR"
 
 --- WIFI ---
-wifi_SSID = "SSID"
-wifi_password = "PASSWORD"
+wifi_SSID = "Familia Central"
+wifi_password = "family1996"
 -- wifi.PHYMODE_B 802.11b, More range, Low Transfer rate, More current draw
 -- wifi.PHYMODE_G 802.11g, Medium range, Medium transfer rate, Medium current draw
 -- wifi.PHYMODE_N 802.11n, Least range, Fast transfer rate, Least current draw 
